@@ -1,0 +1,6 @@
+stdClass Object
+(
+    [cid] => 232
+    [command] => complaints
+)
+select c.*,u.FIRST_NAME,u.LAST_NAME,u.FATHER_NAME,s.NAME as STATUSNAME,uc.NAME as UCHNAME,ca.NAME as CATNAME, (select count(*) from agcms_docs d where d.COMPLAINT_ID=c.ID) as DOCCOUNT from agcms_complaint c left join agcms_statuses s on c.STATUS=s.ID left join agcms_uch uc on c.UCH_ID=uc.ID left join agcms_categories ca on c.CATEGORY_ID=ca.ID left join agcms_users u on c.USER_ID=u.ID where c.ID=232 and c.USER_ID=71 order by DATE DESC 
