@@ -1,0 +1,10 @@
+[
+    {
+        "username" : "John Joe",
+        "vk" : "https://vk.com/feed",
+        "email": "email@mail.ru",
+        "phone": "+7900000000",
+        "location": "Санкт-Петербург",
+        "about": "о себе"
+    }
+]

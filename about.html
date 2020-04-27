@@ -1,0 +1,377 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>О сайт | ONKSPB - Обращения граждан</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font awesome CSS ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Meanmenu CSS ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
+    <!-- Notika icon CSS ============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <!-- Main CSS ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- animate CSS ============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- responsive CSS ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- custom CSS ============================================ -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Start Header Top Area -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="ONKSPB - Обращения граждан" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top Area -->
+    <!-- Mobile Menu start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul class="mobile-menu-nav">
+                                <li><a data-toggle="collapse" data-target="#MainMobile" href="#">Главная</a>
+                                    <ul id="MainMobile" class="collapse dropdown-header-top">
+                                        <li><a href="index.html">Профиль</a></li>
+                                        <li><a href="setting.html">Настройки</a></li>
+                                        <li><a href="users.html">Пользователи</a></li>
+                                        <li onclick="logout()"><a href="#">Выход</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#ComplaintsMobile" href="#">Жалобы</a>
+                                    <ul id="ComplaintsMobile" class="collapse dropdown-header-top">
+                                        <li><a href="complaints.html">Список жалоб</a></li>
+                                        <li><a href="my-complaints.html">Мои жалобы</a></li>
+                                        <li><a href="add-complaint.html">Добавить жалобу</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AdminMobile" href="#">Меню администратора</a>
+                                    <ul id="AdminMobile" class="collapse dropdown-header-top">
+                                        <li><a href="admin-users.html">Пользователи</a></li>
+                                        <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                        <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                        <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AboutMobile" href="#">О сайте</a>
+                                    <ul id="AboutMobile" class="collapse dropdown-header-top">
+                                        <li><a href="about.html">Информация</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#Exit" href="/login.html" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu end -->
+    <!-- Main Menu area start-->
+    <div class="main-menu-area mg-tb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                        <li><a data-toggle="tab" href="#Main"><i class="fa fa-home"></i> Главная</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Complaints"><i class="fa fa-folder-open"></i> Жалобы</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Admin"><i class="fa fa-user"></i> Меню администратора</a>
+                        </li>
+                        <li class="active"><a data-toggle="tab" href="#About"><i class="fa fa-info"></i> О сайте</a>
+                        </li>
+                        <li><a data-toggle="tab" data-target="#Exit" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                    </ul>
+                    <div class="tab-content custom-menu-content">
+                        <div id="Main" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="index.html">Профиль</a>
+                                </li>
+                                <li><a href="settings.html">Настройки</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Complaints" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="complaints.html">Список жалоб</a>
+                                </li>
+                                <li><a href="my-complaints.html">Мои жалобы</a>
+                                </li>
+                                <li><a href="add-complaint.html">Добавить жалобу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="About" class="tab-pane active notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li class="active"><a href="about.html">Информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Admin" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="admin-users.html">Пользователи</a></li>
+                                <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Menu area End-->
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>О сайте</h2>
+                                        <p>Добро пожаловать в <span class="bread-ntd">ONKSPB</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <div class="typography-area" style="min-height: 50vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="tpgp-helper mg-t-30">
+                        <!-- <div class="typography-heading">
+                            <h2 class="mn-hd-s">ОНК по Санкт-Петербургу</h2>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="accordion-stn">
+                                    <div class="panel-group" data-collapse-color="nk-green" id="accordionAbout" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordionAbout" href="#accordionAbout-one" aria-expanded="true">
+                                                        Состав ОНК по Санкт-Петербургу
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionAbout-one" class="collapse in" role="tabpanel">
+                                                <div class="panel-body">
+                                                    <div class="tpgp-helper">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                                <div class="tpgp-al-cl">
+                                                                    <ol>
+                                                                        <li>Бакулина Татьяна Викторовна</li>
+                                                                        <li>Волкова Любовь Леонидовна - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                        <li>Горелов Эдуард Александрович - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                        <li>Ипатова Кира Александровна</li>
+                                                                        <li>Кириллова Оксана Вадимовна</li>
+                                                                        <li>Корпусов Эдуард Васильевич</li>
+                                                                        <li>Косаревская Екатерина Сергеевна - <strong>Секретарь ОНК</strong></li>
+                                                                        <li>Крюков Александр Владимирович</li>
+                                                                        <li>Лоза Александр Михайлович</li>
+                                                                        <li>Мазаев Александр Васильевич - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                        <li>Малков Андрей Витальевич - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                        <li>Марцынкевич Георгий Георгиевич</li>
+                                                                        <li>Михайлов Александр Николаевич</li>
+                                                                        <li>Михайлов Артур Юрьевич</li>
+                                                                        <li>Орлов Александр Сергеевич</li>
+                                                                        <li>Пастыр Николай Иосифович</li>
+                                                                        <li>Самонов Вячеслав Анатольевич</li>
+                                                                        <li>Скоморох Олег Александрович - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                        <li>Сычев Юрий Анатольевич</li>
+                                                                        <li>Татарский Владимир Адольфович</li>
+                                                                        <li>Теплицкая Яна Игоревна</li>
+                                                                        <li>Федотов Сергей Иванович</li>
+                                                                        <li>Хамидов Гулам Рахматович</li>
+                                                                        <li>Холодов Александр Львович - <strong>Председатель ОНК</strong></li>
+                                                                        <li>Ширшов Роман Валерьевич - <strong>Заместитель Председателя ОНК</strong></li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionAbout" href="#accordionAbout-two" aria-expanded="false">
+                                                        Контакты
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionAbout-two" class="collapse" role="tabpanel">
+                                                <div class="panel-body">
+                                                    <p>
+                                                        Адрес комиссии: 191124, Санкт-Петербург, Суворовский пр. 62
+                                                    </p>
+                                                    <p>
+                                                        Адрес для обращений: 199004, а/я 62
+                                                    </p>
+                                                    <p>
+                                                        Электронная почта: <a href="mailto:mail@onkspb.ru">mail@onkspb.ru</a>
+                                                    </p>
+                                                    <p>
+                                                        Сайт: <a href="http://onkspb.ru/pages/onkspb.html" target="_blank">onkspb.ru</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-collapse notika-accrodion-cus">
+                                            <div class="panel-heading" role="tab">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionAbout" href="#accordionAbout-three" aria-expanded="false">
+                                                        Эксперты ОНК
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="accordionAbout-three" class="collapse" role="tabpanel">
+                                                <div class="panel-body">
+                                                    <ol>
+                                                        <li>
+                                                            Фадеев Кирилл Александрович, доктор инфекционист, долгие годы работавший в СПИД центре, член городской комиссии по назначению терапии по ВИЧ и гепатиту С (на срок: до окончания срока ОНК 4 созыва)
+                                                        </li>
+                                                        <li>
+                                                            Бархатова Ксения Михайловна, начальник договорно-юридического отдела СПб ГБУЗ '' Городская поликлиника N86" (на срок до окончания срока ОНК 4 созыва)
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Start Footer area-->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer-copy-right">
+                        <p>ОНК по Санкт-Петербургу © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer area-->
+    <!-- dropzone JS
+    ============================================ -->
+    <script src="js/dropzone/dropzone.js"></script>
+    <!-- jquery
+        ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="js/meanmenu/jquery.meanmenu.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- sparkline JS
+        ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- flot JS
+        ============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- knob JS
+        ============================================ -->
+    <script src="js/knob/jquery.knob.js"></script>
+    <script src="js/knob/jquery.appear.js"></script>
+    <script src="js/knob/knob-active.js"></script>
+    <!--  wave JS
+        ============================================ -->
+    <script src="js/wave/waves.min.js"></script>
+    <script src="js/wave/wave-active.js"></script>
+    <!-- icheck JS
+        ============================================ -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <script src="js/icheck/icheck-active.js"></script>
+    <!--  todo JS
+        ============================================ -->
+    <script src="js/todo/jquery.todo.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    getUserData();
+    getUserStatistics();
+    getLastMessages(3);
+    </script>
+</body>
+
+</html>

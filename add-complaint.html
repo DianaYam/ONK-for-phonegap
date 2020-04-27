@@ -1,0 +1,642 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Добавить жалобу | ONKSPB - Обращения граждан</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font awesome CSS ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS ============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- meanmenu CSS ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS ============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- summernote CSS ============================================ -->
+    <link rel="stylesheet" href="css/summernote/summernote.css">
+    <!-- Range Slider CSS ============================================ -->
+    <link rel="stylesheet" href="css/themesaller-forms.css">
+    <!-- normalize CSS ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- mCustomScrollbar CSS ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS ============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <!-- bootstrap select CSS ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap-select/bootstrap-select.css">
+    <!-- datapicker CSS ============================================ -->
+    <link rel="stylesheet" href="css/datapicker/datepicker3.css">
+    <!-- Color Picker CSS ============================================ -->
+    <link rel="stylesheet" href="css/color-picker/farbtastic.css">
+    <!-- main CSS ============================================ -->
+    <link rel="stylesheet" href="css/chosen/chosen.css">
+    <!-- notification CSS ============================================ -->
+    <link rel="stylesheet" href="css/notification/notification.css">
+    <!-- dropzone CSS ============================================ -->
+    <link rel="stylesheet" href="css/dropzone/dropzone.css">
+    <!-- wave CSS ============================================ -->
+    <link rel="stylesheet" href="css/wave/waves.min.css">
+    <!-- main CSS ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- custom CSS ============================================ -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- modernizr JS ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Start Header Top Area -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="#"><img src="img/logo/logo.png" alt="ONKSPB - Обращения граждан" /></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="header-top-menu">
+                        <ul class="nav navbar-nav notika-top-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
+                                <div role="menu" class="dropdown-menu search-dd animated flipInX">
+                                    <div class="search-input">
+                                        <i class="notika-icon notika-left-arrow"></i>
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" role="button" aria-expanded="false" class="nav-link"><span><i class="fa fa-cog"></i></span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" role="button" aria-expanded="false" class="nav-link"><span><i class="fa fa-sign-out"></i></span></a>
+                            </li>
+                        </ul>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top Area -->
+    <!-- Mobile Menu start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul class="mobile-menu-nav">
+                                <li><a data-toggle="collapse" data-target="#MainMobile" href="#">Главная</a>
+                                    <ul id="MainMobile" class="collapse dropdown-header-top">
+                                        <li><a href="index.html">Профиль</a></li>
+                                        <li><a href="setting.html">Настройки</a></li>
+                                        <li><a href="users.html">Пользователи</a></li>
+                                        <li onclick="logout()"><a href="#">Выход</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#ComplaintsMobile" href="#">Жалобы</a>
+                                    <ul id="ComplaintsMobile" class="collapse dropdown-header-top">
+                                        <li><a href="complaints.html">Список жалоб</a></li>
+                                        <li><a href="my-complaints.html">Мои жалобы</a></li>
+                                        <li><a href="add-complaint.html">Добавить жалобу</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AdminMobile" href="#">Меню администратора</a>
+                                    <ul id="AdminMobile" class="collapse dropdown-header-top">
+                                        <li><a href="admin-users.html">Пользователи</a></li>
+                                        <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                        <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                        <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AboutMobile" href="#">О сайте</a>
+                                    <ul id="AboutMobile" class="collapse dropdown-header-top">
+                                        <li><a href="about.html">Информация</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#Exit" href="/login.html" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu end -->
+    <!-- Main Menu area start-->
+    <div class="main-menu-area mg-tb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                        <li><a data-toggle="tab" href="#Main"><i class="fa fa-home"></i> Главная</a>
+                        </li>
+                        <li class="active"><a data-toggle="tab" href="#Complaints"><i class="fa fa-folder-open"></i> Жалобы</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Admin"><i class="fa fa-user"></i> Меню администратора</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#About"><i class="fa fa-info"></i> О сайте</a>
+                        </li>
+                        <li><a data-toggle="tab" data-target="#Exit" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                    </ul>
+                    <div class="tab-content custom-menu-content">
+                        <div id="Main" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="index.html">Профиль</a>
+                                </li>
+                                <li><a href="settings.html">Настройки</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Complaints" class="tab-pane active notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="complaints.html">Список жалоб</a>
+                                </li>
+                                <li><a href="my-complaints.html">Мои жалобы</a>
+                                </li>
+                                <li class="active"><a href="add-complaint.html">Добавить жалобу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="About" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="about.html">Информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Admin" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="admin-users.html">Пользователи</a></li>
+                                <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Menu area End-->
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Добавить жалобу</h2>
+                                        <p>Добро пожаловать в <span class="bread-ntd">ONKSPB</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <div class="form-element-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="view-mail-list sm-res-mg-t-30">
+                                    <div class="nk-int-mk sl-dp-mn">
+                                        <h2>Статус заявки</h2>
+                                    </div>
+                                    <div class="form-group ic-cmp-int">
+                                        <div class="bootstrap-select fm-cmp-mg">
+                                            <select class="selectpicker" id="statusSelect">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 10px;">
+                                <div class="nk-int-mk sl-dp-mn">
+                                    <h2>Будет рассматривать</h2>
+                                </div>
+                                <div class="bootstrap-select fm-cmp-mg">
+                                    <select class="selectpicker" data-live-search="true" name="mentor" id="mentorSelect" title="">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk sl-dp-mn">
+                                    <h2>Фамилия, имя, отчество</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Фамилия, имя, отчество" id="applicantName" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk sl-dp-mn">
+                                    <h2>Дата рождения</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-calendar"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" data-mask="99/99/9999" placeholder="день/месяц/год" id="applicantDateOfBirth">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk sl-dp-mn">
+                                    <h2>Пол</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-venus-mars"></i>
+                                    </div>
+                                    <div class="bootstrap-select fm-cmp-mg">
+                                        <select class="selectpicker" id="applicantGender" required>
+                                            <option>Мужской</option>
+                                            <option>Женский</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
+                                <div class="nk-int-mk sl-dp-mn sm-res-mg-t-10">
+                                    <h2>Учреждение</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-building-o"></i>
+                                    </div>
+                                    <div class="bootstrap-select fm-cmp-mg">
+                                        <select class="selectpicker" id="applicantPenitentiary">
+                                            <option value="0" disabled selected>--</option>
+                                            <optgroup label="Колонии">
+                                                <option value="5">Детская ИК Колпино</option>
+                                                <option value="1">ИК-5 Металлострой</option>
+                                                <option value="2">ИК-6 Обухово</option>
+                                                <option value="3">ИК-7 Яблоневка</option>
+                                            </optgroup>
+                                            <optgroup label="СИЗО">
+                                                <option value="6">СИЗО 1 - Кресты (Новые)</option>
+                                                <option value="7">СИЗО 1 - Кресты (Старые)</option>
+                                                <option value="8">СИЗО 3 (ФСБ, федеральное)</option>
+                                                <option value="9">СИЗО 4 - Лебедева</option>
+                                                <option value="20">СИЗО 5 - Арсенальная</option>
+                                            </optgroup>
+                                            <optgroup label="ИВС">
+                                                <option value="10">ИВС Захарьевская 19</option>
+                                            </optgroup>
+                                            <optgroup label="Отделы полиции">
+                                                <option value="14">ОП 1 Адмиралтейский</option>
+                                                <option value="15">ОП 2 Адмиралтейский</option>
+                                                <option value="35">ОП 3 Калининский</option>
+                                                <option value="80">ОП 5 Фрунзенский</option>
+                                                <option value="36">ОП 6 Калининский</option>
+                                                <option value="81">ОП 7 Фрунзенский</option>
+                                                <option value="40">ОП 8 Кировский</option>
+                                                <option value="51">ОП 9 Красносельский</option>
+                                                <option value="62">ОП 10 Невский</option>
+                                                <option value="82">ОП 12 Фрунзенский</option>
+                                                <option value="46">ОП 13 Красногвардейский</option>
+                                                <option value="83">ОП 14 Фрунзенский</option>
+                                                <option value="37">ОП 15 Калининский</option>
+                                                <option value="24">ОП 16 Василеостровский</option>
+                                                <option value="38">ОП 17 Калининский</option>
+                                                <option value="69">ОП 18 Петроградский</option>
+                                                <option value="28">ОП 19 Выборгский</option>
+                                                <option value="29">ОП 20 Выборгский</option>
+                                                <option value="39">ОП 21 Калининский</option>
+                                                <option value="47">ОП 22 Красногвардейский</option>
+                                                <option value="63">ОП 23 Невский</option>
+                                                <option value="64">ОП 24 Невский</option>
+                                                <option value="74">ОП 25 Приморский</option>
+                                                <option value="48">ОП 26 Красногвардейский</option>
+                                                <option value="84">ОП 27 Фрунзенский</option>
+                                                <option value="85">ОП 28 Центральный</option>
+                                                <option value="59">ОП 29 Московский</option>
+                                                <option value="25">ОП 30 Василеостровский</option>
+                                                <option value="41">ОП 31 Кировский</option>
+                                                <option value="65">ОП 32 Невский</option>
+                                                <option value="60">ОП 33 Московский</option>
+                                                <option value="75">ОП 34 Приморский</option>
+                                                <option value="76">ОП 35 Приморский</option>
+                                                <option value="30">ОП 36 Выборгский</option>
+                                                <option value="26">ОП 37 Василеостровский</option>
+                                                <option value="22">ОП 38 Адмиралтейский</option>
+                                                <option value="43">ОП 39 Колпинский</option>
+                                                <option value="52">ОП 42 Красносельский</option>
+                                                <option value="70">ОП 43 Петроградский</option>
+                                                <option value="77">ОП 44 Приморский</option>
+                                                <option value="66">ОП 45 Невский</option>
+                                                <option value="72">ОП 46 Петродворцовый</option>
+                                                <option value="31">ОП 49 Выборгский</option>
+                                                <option value="57">ОП 50 Курортный</option>
+                                                <option value="61">ОП 51 Московский</option>
+                                                <option value="49">ОП 52 Красногвардейский</option>
+                                                <option value="78">ОП 53 Приморский</option>
+                                                <option value="53">ОП 54 Красносельский</option>
+                                                <option value="44">ОП 55 Колпинский</option>
+                                                <option value="32">ОП 57 Выборгский</option>
+                                                <option value="33">ОП 58 Выборгский</option>
+                                                <option value="34">ОП 59 Выборгский</option>
+                                                <option value="27">ОП 60 Василеостровский</option>
+                                                <option value="42">ОП 64 Кировский</option>
+                                                <option value="50">ОП 66 Красногвардейский</option>
+                                                <option value="67">ОП 70 Невский</option>
+                                                <option value="71">ОП 71 Петроградский</option>
+                                                <option value="54">ОП 74 Красносельский</option>
+                                                <option value="68">ОП 75 Невский</option>
+                                                <option value="86">ОП 76 Центральный</option>
+                                                <option value="23">ОП 77 Адмиралтейский</option>
+                                                <option value="87">ОП 78 Центральный</option>
+                                                <option value="45">ОП 80 Колпинский</option>
+                                                <option value="58">ОП 81 Курортный</option>
+                                                <option value="55">ОП 82 Красносельский</option>
+                                                <option value="56">ОП 84 Красносельский</option>
+                                                <option value="73">ОП 85 Петродворцовый</option>
+                                                <option value="79">ОП 86 Приморский</option>
+                                            </optgroup>
+                                            <optgroup label="Прочие">
+                                                <option value="90">Больница им. Гааза</option>
+                                                <option value="21">Гаупвахта (Садовая)</option>
+                                                <option value="89">Другие регионы</option>
+                                                <option value="17">Иностранные граждане (Красное село)</option>
+                                                <option value="88">Ленинградская область</option>
+                                                <option value="18">Несовершеннолетние</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
+                                <div class="nk-int-mk sl-dp-mn sm-res-mg-t-10">
+                                    <h2>Категория</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-exclamation"></i>
+                                    </div>
+                                    <div class="bootstrap-select fm-cmp-mg">
+                                        <select class="selectpicker" id="applicationType">
+                                            <option value="">Условия содержания</option>
+                                            <option value="">Поведение сотрудников</option>
+                                            <option value="">Прочее</option>
+                                            <option value="">На суд</option>
+                                            <option value="">Медицина</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk sl-dp-mn sm-res-mg-t-10">
+                                    <h2>Суть жалобы</h2>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="nk-int-st">
+                                        <textarea name="applicationText" id="applicationText" cols="30" rows="5" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-download-system">
+                                <div class="dw-st-ic mg-t-20">
+                                    <div class="dw-atc-sn" id="linkContainerDesc">
+                                    </div>
+                                    <div class="dw-atc-sn" id="linkContainer">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdone-nk mg-t-30">
+                                <div id="dropzone1" class="multi-uploader-cs">
+                                    <form action="./api/v0.01/?cmd=uploaddoc" class="dropzone dropzone-nk needsclick" id="demo1-upload">
+                                        <div class="dz-message needsclick download-custom">
+                                            <i class="notika-icon notika-cloud"></i>
+                                            <h2>Перетащите файл или просто кликните, чтоб загрузить</h2>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="vw-ml-action-ls text-right mg-t-20">
+                                    <div class="btn-list">
+                                        <!-- <button class="btn btn-primary notika-btn-primary waves-effect"><i class="fa fa-ban"></i> Отмена</button> -->
+                                        <button class="btn btn-primary notika-btn-primary waves-effect" id="saveBtn" onclick="editComplaints(-1)"><i class="fa fa-save"></i> Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alertModal" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Что-то пошло не так...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" role="dialog">
+        <div class="modal-dialog modals-default nk-indigo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Изменения успешно сохранены</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteDocModal" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2>Удалить документ?</h2>
+                    <p>Вы уверены, что хотите удалить документ '<strong id="docNameDel"></strong>'?</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="docDelAgree">Удалить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer area-->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer-copy-right">
+                        <p>ОНК по Санкт-Петербургу © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer area-->
+    <!-- jquery
+        ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+            ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+            ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+            ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- owl.carousel JS
+            ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- scrollUp JS
+            ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- meanmenu JS
+            ============================================ -->
+    <script src="js/meanmenu/jquery.meanmenu.js"></script>
+    <!-- counterup JS
+            ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+            ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- sparkline JS
+            ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- flot JS
+            ============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- knob JS
+            ============================================ -->
+    <script src="js/knob/jquery.knob.js"></script>
+    <script src="js/knob/jquery.appear.js"></script>
+    <script src="js/knob/knob-active.js"></script>
+    <!-- Input Mask JS
+            ============================================ -->
+    <script src="js/jasny-bootstrap.min.js"></script>
+    <!-- icheck JS
+            ============================================ -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <script src="js/icheck/icheck-active.js"></script>
+    <!-- rangle-slider JS
+            ============================================ -->
+    <script src="js/rangle-slider/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/rangle-slider/jquery-ui-touch-punch.min.js"></script>
+    <script src="js/rangle-slider/rangle-active.js"></script>
+    <!-- datapicker JS
+            ============================================ -->
+    <script src="js/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/datapicker/datepicker-active.js"></script>
+    <!-- bootstrap select JS
+            ============================================ -->
+    <script src="js/bootstrap-select/bootstrap-select.js"></script>
+    <!--  color-picker JS
+            ============================================ -->
+    <script src="js/color-picker/farbtastic.min.js"></script>
+    <script src="js/color-picker/color-picker.js"></script>
+    <!--  notification JS
+            ============================================ -->
+    <script src="js/notification/bootstrap-growl.min.js"></script>
+    <script src="js/notification/notification-active.js"></script>
+    <!--  summernote JS
+            ============================================ -->
+    <script src="js/summernote/summernote-updated.min.js"></script>
+    <script src="js/summernote/summernote-active.js"></script>
+    <!-- dropzone JS
+            ============================================ -->
+    <script src="js/dropzone/dropzone.js"></script>
+    <!--  wave JS
+            ============================================ -->
+    <script src="js/wave/waves.min.js"></script>
+    <script src="js/wave/wave-active.js"></script>
+    <!--  chosen JS
+            ============================================ -->
+    <script src="js/chosen/chosen.jquery.js"></script>
+    <!--  Chat JS
+            ============================================ -->
+    <script src="js/chat/jquery.chat.js"></script>
+    <!--  todo JS
+            ============================================ -->
+    <script src="js/todo/jquery.todo.js"></script>
+    <!-- plugins JS
+            ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+            ============================================ -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <!-- tawk chat JS
+            ============================================ -->
+    <!-- <script src="js/tawk-chat.js"></script> -->
+    <script>
+    $(document).ready(function() {
+        getComplaintsEditingWindow(-1);
+    });
+    </script>
+</body>
+
+</html>
