@@ -1,0 +1,4 @@
+Array
+(
+    [cmd] => ./user.json
+)
