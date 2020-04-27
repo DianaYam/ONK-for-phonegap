@@ -1,0 +1,126 @@
+menu 
+    #MainMobile
+    #ComplaintsMobile
+    #AboutMobile
+    #AdminMobile
+
+    #Main
+    #Complaints
+    #About
+    #Admin
+
+index.html
+    id
+        #userStatisticsContainer
+        #userDataContainer
+        #userLastMessagesContainer
+
+    json
+        user.json 
+            id
+            login
+            username
+            password
+            status
+            img
+            email
+            vk
+            phone
+            about
+            location
+            complaints
+            complaints_data
+            requests
+            requests_data
+            penitentiaries
+            penitentiaries_data
+            current
+            current_data
+
+        messages.json 
+            userphoto
+            username
+            complaintsurl
+            messagecontent
+
+    function
+        getUserData
+        getUserStatistics
+        getLastMessages
+
+        
+setting.html
+    id
+        #userName
+        #userLocation
+        #userAbout
+        #userVk
+        #userEmail
+        #userPhone
+        #oldPassInput
+        #userPassword
+
+        #alertModal
+        #deleteAccountModal
+        #successModal
+    function
+        getAccountSetting
+        deleteAccountModal
+        deleteAccount
+        editAccountSetting
+        checkAccountPassword
+        editAccountPassword
+    json
+        user.json 
+            id
+            login
+            username
+            password
+            status
+            img
+            email
+            vk
+            phone
+            about
+            location
+            complaints
+            complaints_data
+            requests
+            requests_data
+            penitentiaries
+            penitentiaries_data
+            current
+            current_data
+        
+
+
+users.html  
+    id
+        #usersDataContainer
+        #
+        #
+        #
+        #
+        #
+    function 
+        getUsersData
+
+complaints.html
+
+
+
+my-complaints.html
+
+add-complaint.html
+
+about.html
+
+admin-users.html
+
+admin-complaints.html
+
+admin-complaints-type.html
+
+admin-complaints-status.html
+
+admin-penitentiary.html

@@ -1,0 +1,638 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Настройки | ONKSPB - Обращения граждан</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font awesome CSS ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS ============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- meanmenu CSS ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS ============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- mCustomScrollbar CSS ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS ============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <!-- wave CSS ============================================ -->
+    <link rel="stylesheet" href="css/wave/waves.min.css">
+    <link rel="stylesheet" href="css/wave/button.css">
+    <!-- main CSS ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- dropzone CSS ============================================ -->
+    <link rel="stylesheet" href="css/dropzone/dropzone.css">
+    <!-- custom CSS ============================================ -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- modernizr JS ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Start Header Top Area -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="ONKSPB - Обращения граждан" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Top Area -->
+    <!-- Mobile Menu start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul class="mobile-menu-nav">
+                                <li><a data-toggle="collapse" data-target="#MainMobile" href="#">Главная</a>
+                                    <ul id="MainMobile" class="collapse dropdown-header-top">
+                                        <li><a href="index.html">Профиль</a></li>
+                                        <li><a href="setting.html">Настройки</a></li>
+                                        <li><a href="users.html">Пользователи</a></li>
+                                        <li onclick="logout()"><a href="#">Выход</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#ComplaintsMobile" href="#">Жалобы</a>
+                                    <ul id="ComplaintsMobile" class="collapse dropdown-header-top">
+                                        <li><a href="complaints.html">Список жалоб</a></li>
+                                        <li><a href="my-complaints.html">Мои жалобы</a></li>
+                                        <li><a href="add-complaint.html">Добавить жалобу</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AdminMobile" href="#">Меню администратора</a>
+                                    <ul id="AdminMobile" class="collapse dropdown-header-top">
+                                        <li><a href="admin-users.html">Пользователи</a></li>
+                                        <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                        <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                        <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AboutMobile" href="#">О сайте</a>
+                                    <ul id="AboutMobile" class="collapse dropdown-header-top">
+                                        <li><a href="about.html">Информация</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#Exit" href="/login.html" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu end -->
+    <!-- Main Menu area start-->
+    <div class="main-menu-area mg-tb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                        <li class="active"><a data-toggle="tab" href="#Main"><i class="fa fa-home"></i> Главная</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Complaints"><i class="fa fa-folder-open"></i> Жалобы</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Admin"><i class="fa fa-user"></i> Меню администратора</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#About"><i class="fa fa-info"></i> О сайте</a>
+                        </li>
+                        <li><a data-toggle="tab" data-target="#Exit" onclick="logout(); return false;" href="/login.html">Выход</a></li>
+                    </ul>
+                    <div class="tab-content custom-menu-content">
+                        <div id="Main" class="tab-pane active notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="index.html">Профиль</a>
+                                </li>
+                                <li class="active"><a href="settings.html">Настройки</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Complaints" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="complaints.html">Список жалоб</a>
+                                </li>
+                                <li><a href="my-complaints.html">Мои жалобы</a>
+                                </li>
+                                <li><a href="add-complaint.html">Добавить жалобу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="About" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="about.html">Информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Admin" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="admin-users.html">Пользователи</a></li>
+                                <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Menu area End-->
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="fa fa-cogs"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Настройки</h2>
+                                        <p>Добро пожаловать в <span class="bread-ntd">ONKSPB</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <!-- Setting Start -->
+    <div class="settings-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list">
+                        <div class="cmp-tb-hd">
+                            <h2>Аккаунт</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="nk-int-mk">
+                                    <h2>Аватар</h2>
+                                </div>
+                                <div class="avatar-preview">
+                                    <img src="" alt="" id="userImage">
+                                </div>
+                                <div class="btn-group" id="avatar-btn-group" role="group" arial-label="upload avatar group">
+                                    <button class="btn btn-success" id="avatarChoose">Выберите файл</button>
+                                    <button class="btn btn-success" id="avatarUpload">Upload</button>
+                                    <button class="btn btn-danger" id="removeAvatar">Удалить</button>
+                                    <input type="file" id="avatar-input" name='avatar' accept=".png,.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Имя пользователя</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Имя Отчество Фамилия" id="userName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Ваше местоположение</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Пример, Санкт-Петербург" id="userLocation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>О себе</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-edit"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Пример, Заместитель Председателя ОНК" id="userAbout">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Ссылка Вконтакте</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-vk"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input id="userVk" type="text" class="form-control" placeholder="Пример, https://vk.com/">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Email</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Пример, email@email.com" id="userEmail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Телефон</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="text" class="form-control" placeholder="Телефон" id="userPhone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="pull-right">
+                                    <button class="btn btn-primary notika-btn-primary waves-effect" onclick="editAccountSetting()">Изменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settings-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list">
+                        <div class="cmp-tb-hd">
+                            <h2>Пароль</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Новый пароль</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-key"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="password" class="form-control" placeholder="Введите новый пароль" id="newPassInput">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="nk-int-mk">
+                                    <h2>Новый пароль ещё раз</h2>
+                                </div>
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="fa fa-key"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                        <input type="password" class="form-control" placeholder="Введите новый пароль ещё раз" id="newPassInput2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="pull-right">
+                                    <button class="btn btn-primary notika-btn-primary waves-effect" onclick="checkAccountPassword()">Изменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="settings-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list">
+                        <div class="cmp-tb-hd">
+                            <h2>Удалить аккаунт</h2>
+                            <p>Вы уверены, что хотите удалить аккаунт? данное действие невозможно отменить.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="pull-right">
+                                    <button class="btn btn-danger notika-btn-danger waves-effect" onclick="deleteAccountModal()">Удалить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Setting End -->
+    <div class="modal fade" id="alertModal" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2>ОШИБКА:</h2>
+                    <p>Что-то пошло не так...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteAccountModal" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2>Удалить аккаунт</h2>
+                    <p>Вы уверены, что хотите удалить аккаунт? Данное действие невозможно отменить.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" onclick="deleteAccount()">Удалить</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" role="dialog">
+        <div class="modal-dialog modals-default nk-indigo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Изменения успешно сохранены</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer area-->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer-copy-right">
+                        <p>ОНК по Санкт-Петербургу © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer area-->
+    <!-- dropzone JS
+    ============================================ -->
+    <script src="js/dropzone/dropzone.js"></script>
+    <!-- jquery
+        ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="js/meanmenu/jquery.meanmenu.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- sparkline JS
+        ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- flot JS
+        ============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- knob JS
+        ============================================ -->
+    <script src="js/knob/jquery.knob.js"></script>
+    <script src="js/knob/jquery.appear.js"></script>
+    <script src="js/knob/knob-active.js"></script>
+    <!--  wave JS
+        ============================================ -->
+    <script src="js/wave/waves.min.js"></script>
+    <script src="js/wave/wave-active.js"></script>
+    <!-- icheck JS
+        ============================================ -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <script src="js/icheck/icheck-active.js"></script>
+    <!--  todo JS
+        ============================================ -->
+    <script src="js/todo/jquery.todo.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS ============================================ -->
+    <script src="js/main.js"></script>
+    <!-- main JS ============================================ -->
+    <script src="js/index.js"></script>
+    <script>
+    var id;
+    var files;
+
+    function openFileDialog() {
+        $('#avatar-input').trigger('click');
+    }
+
+    function uploadFile(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        if (typeof files == 'undefined') return;
+
+        avatarRemove(event);
+
+        var data = new FormData();
+
+        $.each(files, function(key, value) {
+            data.append(key, value);
+        });
+
+        data.append('avatar_file_upload', id);
+
+        $.ajax({
+            url: './avatarUpload.php',
+            type: 'POST',
+            data: data,
+            cache: false,
+            dataType: 'html',
+            processData: false,
+            contentType: false,
+            success: function(respond, status, jqXHR) {
+                if (typeof respond.error === 'undefined') {
+                    // console.log('Success');
+                } else {
+                    // console.log('Error ' + respond.error);
+                }
+            },
+            error: function(jqXHR, status, errorThrow) {
+                // console.log('AJAX error ' + status, ' ', jqXHR);
+            }
+        });
+
+        // сохранение пути до картинки в базе
+
+        var outdata = {};
+        outdata.id = myStorage.userID;
+        outdata.method = 'update';
+        outdata.setfields = {};
+
+        let avatar = $('#avatar-input').val();
+        if (avatar) {
+            outdata.setfields.uuserpic = './avatars/' + myStorage.userID + getExtension(avatar);
+        }
+
+        // переписать, когда будут данные
+        ajaxCall("useredit", checkResult, outdata);
+    }
+
+    function avatarRemove(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        var data = { 'avatar_file_upload': id };
+
+        $.ajax({
+            url: './avatarRemove.php',
+            type: 'POST',
+            data: data,
+            success: function(data) {
+                // console.log('success');
+            },
+            error: function(jqXHR, status, errorThrow) {
+                // console.log('AJAX error ', status, jqXHR);
+            }
+        });
+
+        var outdata = {};
+        outdata.id = myStorage.userID;
+        outdata.method = 'update';
+        outdata.setfields = {};
+        outdata.setfields.uuserpic = './img/post/user_nophoto.png';
+
+        ajaxCall("useredit", checkResult, outdata);
+    }
+
+    function getAccountSettingImage() {
+        var outdata = {};
+        outdata.id = myStorage.userID;
+
+        ajaxCall('user', function(text) {
+            var data = text;
+
+            $('#userImage').attr("src", data[0].img);
+            $('#userImage').attr("alt", data[0].username);
+        }, outdata);
+    }
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#userImage').attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $(document).ready(function() {
+        $("#avatar-input").on('change', function() {
+            files = this.files;
+
+            if (files[0].type === "image/jpeg" || files[0].type === "image/png") {
+                readURL(this);
+                $("#avatarUpload").trigger('click');
+            }
+        });
+
+        $("#removeAvatar").click(avatarRemove);
+        $("#removeAvatar").click(function() {
+            $('#avatar-input').val('');
+            getAccountSettingImage();
+        });
+
+        $("#avatarChoose").click(openFileDialog);
+        $("#avatarUpload").click(uploadFile);
+        ajaxCall('user', function(text) {
+            id = text[0].id;
+        });
+
+        getAccountSetting();
+    });
+    </script>
+</body>
+
+</html>

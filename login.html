@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Вход для пользователей | ONKSPB - Обращения граждан</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+        ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+        ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font awesome CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- normalize CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- mCustomScrollbar CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- wave CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/wave/waves.min.css">
+    <!-- Notika icon CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <!-- main CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS
+        ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- custom CSS ============================================ -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- modernizr JS
+        ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- jquery
+        ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type='text/javascript'>
+    var myStorage = window.localStorage;
+    myStorage.userName = '';
+    myStorage.userID = 0;
+    myStorage.userRole = 0;
+
+    function ajaxCall(data, callback) {
+        $.ajax({
+            url: window.location.origin + '/api/v0.01/',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            type: 'POST',
+            success: function(data, textStatus, jqXHR) {
+                (data && data.error != true) ? callback(data, 1): callback(data, -1);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                var data = {};
+                data.error = true;
+                data.message = 'Ответ сервера: ' + errorThrown;
+                callback(data, -1);
+            }
+        });
+    }
+
+    function doLogin() {
+        console.log('auth');
+        var data = {};
+        data.command = 'login';
+        data.username = $('#username').val();
+        data.password = $('#userpassword').val();
+        console.log($('#username').val());
+        console.log($('#userpassword').val());
+        ajaxCall(data, doAuthStep);
+    }
+
+    function doNextStep(data, result) {}
+
+    function doAuthStep(data, result) {
+        console.log(data);
+        console.log(result);
+        if (result < 0) {
+            $('#gotError .modal-body p').html(data.message);
+            $('#gotError').modal('show');
+        } else {
+            myStorage.userName = data.fio;
+            myStorage.userID = data.id;
+            myStorage.userRole = data.role;
+            location.href = window.location.origin + '/index.html'
+        }
+    }
+
+    $(document).ready(function() {
+        var data = {};
+        data.command = 'logout';
+        ajaxCall(data, doNextStep);
+    });
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Login Register area Start-->
+    <div class="login-content" style="background-color: #8e8080;">
+        <!-- Login -->
+        <div class="nk-block toggled" id="l-login">
+            <div class="nk-form">
+                <div class="input-group">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
+                    <div class="nk-int-st">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Имя пользователя">
+                    </div>
+                </div>
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+                    <div class="nk-int-st">
+                        <input type="password" class="form-control" id="userpassword" name="userpassword" placeholder="Пароль">
+                    </div>
+                </div>
+                <a href="#" class="btn btn-login btn-success btn-float" onclick="doLogin(); return false;"><i class="notika-icon notika-right-arrow right-arrow-ant" onclick="login()"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="gotError" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2>ОШИБКА</h2>
+                    <p>Что-то пошло не так!</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

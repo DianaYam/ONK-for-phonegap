@@ -1,0 +1,501 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Жалоба | ONKSPB - Обращения граждан</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts ============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS ============================================ -->
+    <!-- bootstrap select CSS ============================================ -->
+    <link rel="stylesheet" href="css/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font awesome CSS ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- owl.carousel CSS ============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- meanmenu CSS ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS ============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/chosen/chosen.css">
+    <!-- mCustomScrollbar CSS ============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS ============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <!-- wave CSS ============================================ -->
+    <link rel="stylesheet" href="css/wave/waves.min.css">
+    <link rel="stylesheet" href="css/wave/button.css">
+    <!-- main CSS ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- dropzone CSS ============================================ -->
+    <link rel="stylesheet" href="css/dropzone/dropzone.css">
+    <!-- custom CSS ============================================ -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- modernizr JS ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Start Header Top Area -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="ONKSPB - Обращения граждан" /></a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="header-top-menu">
+                        <ul class="nav navbar-nav notika-top-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
+                                <div role="menu" class="dropdown-menu search-dd animated flipInX">
+                                    <div class="search-input">
+                                        <i class="notika-icon notika-left-arrow"></i>
+                                        <input type="text" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" role="button" aria-expanded="false" class="nav-link"><span><i class="fa fa-cog"></i></span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" role="button" aria-expanded="false" class="nav-link"><span><i class="fa fa-sign-out"></i></span></a>
+                            </li>
+                        </ul>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End Header Top Area -->
+    <!-- Mobile Menu start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul class="mobile-menu-nav">
+                                <li><a data-toggle="collapse" data-target="#MainMobile" href="#">Главная</a>
+                                    <ul id="MainMobile" class="collapse dropdown-header-top">
+                                        <li><a href="index.html">Профиль</a></li>
+                                        <li><a href="setting.html">Настройки</a></li>
+                                        <li><a href="users.html">Пользователи</a></li>
+                                        <li onclick="logout()"><a href="#">Выход</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#ComplaintsMobile" href="#">Жалобы</a>
+                                    <ul id="ComplaintsMobile" class="collapse dropdown-header-top">
+                                        <li><a href="complaints.html">Список жалоб</a></li>
+                                        <li><a href="my-complaints.html">Мои жалобы</a></li>
+                                        <li><a href="add-complaint.html">Добавить жалобу</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AdminMobile" href="#">Меню администратора</a>
+                                    <ul id="AdminMobile" class="collapse dropdown-header-top">
+                                        <li><a href="admin-users.html">Пользователи</a></li>
+                                        <li><a href="admin-complaints.html">Жалобы</a></li>
+                                        <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                        <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                        <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-target="#AboutMobile" href="#">О сайте</a>
+                                    <ul id="AboutMobile" class="collapse dropdown-header-top">
+                                        <li><a href="about.html">Информация</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu end -->
+    <!-- Main Menu area start-->
+    <div class="main-menu-area mg-tb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                        <li><a data-toggle="tab" href="#Main"><i class="fa fa-home"></i> Главная</a>
+                        </li>
+                        <li class="active"><a data-toggle="tab" href="#Complaints"><i class="fa fa-folder-open"></i> Жалобы</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#Admin"><i class="fa fa-user"></i> Меню администратора</a>
+                        </li>
+                        <li><a data-toggle="tab" href="#About"><i class="fa fa-info"></i> О сайте</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content custom-menu-content">
+                        <div id="Main" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="index.html">Профиль</a>
+                                </li>
+                                <li><a href="settings.html">Настройки</a>
+                                </li>
+                                <li><a href="users.html">Пользователи</a>
+                                </li>
+                                <li onclick="logout()"><a href="#">Выход</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Complaints" class="tab-pane active notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="complaints.html">Список жалоб</a>
+                                </li>
+                                <li><a href="my-complaints.html">Мои жалобы</a>
+                                </li>
+                                <li><a href="add-complaint.html">Добавить жалобу</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="About" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="about.html">Информация</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Admin" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="admin-users.html">Пользователи</a></li>
+                                <li><a href="admin-complaints.html">Жалобы</a></li>
+                                <li><a href="admin-complaints-type.html">Категории жалоб</a></li>
+                                <li><a href="admin-complaints-status.html">Статусы жалоб</a></li>
+                                <li><a href="admin-penitentiary.html">Учреждения</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Menu area End-->
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="fa fa-folder-open"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Детали жалобы</h2>
+                                        <p>Добро пожаловать в <span class="bread-ntd">ONKSPB</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+    <div class="mentor-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="view-mail-list sm-res-mg-t-30"">
+                        <div class=" nk-int-mk sl-dp-mn">
+                        <h2>Статус заявки</h2>
+                    </div>
+                    <div class="form-group ic-cmp-int">
+                        <div class="bootstrap-select fm-cmp-mg">
+                            <select class="selectpicker">
+                                <option>Только поступила</option>
+                                <option>В работе</option>
+                                <option>Отправлен запрос</option>
+                                <option>Ответ получен</option>
+                                <option>Повторный запрос отправлен</option>
+                                <option>Проверка завершена</option>
+                                <option>Не целесообразно проверять</option>
+                                <option>Переслали в ОНК другого региона</option>
+                                <option>Постоянный контроль</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Inbox area Start-->
+    <div class="inbox-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="view-mail-list sm-res-mg-t-30">
+                        <div class="cmp-tb-hd mg-t-20">
+                            <h2>Данные жалобы #<span id="aplicantionNumber"></span></h2>
+                        </div>
+                        <div class="">
+                            <p><b>Фамилия заявителя: </b><span id="aplicantName"></span></p>
+                            <p><b>Дата рождения: </b><span id="aplicantDateOfBirth"></span></p>
+                            <p><b>Пол:</b> <span id="aplicantGender"></span></p>
+                            <p><b>Учреждение:</b> <span id="aplicantPenitentiary"></span></p>
+                            <p><b>Категория:</b> <span id="aplicationType"></span></p>
+                            <p><b>Разбирает: </b><span id="aplicationMentor"></span></p>
+                        </div>
+                        <div class="view-mail-atn" id="aplicationContent">
+                        </div>
+                        <div class="file-download-system">
+                            <div class="dw-st-ic mg-t-20">
+                                <!-- <div class="dw-atc-sn">
+                                    <span><i class="notika-icon notika-paperclip"></i> 4 вложения <i class="notika-icon notika-arrow-right atc-sign"></i></span>
+                                </div> -->
+                                <div class="dw-atc-sn" id="linkContainer">
+                                    <!-- <a class="btn dw-al-ft" href="http://doc.onkspb.ru/upload/files/sizo-1-popkov-ae-1981-gr.pdf">sizo-1-popkov-ae-1981-gr <i class="notika-icon notika-file"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdone-nk mg-t-30">
+                            <div id="dropzone1" class="multi-uploader-cs">
+                                <form action="/upload" class="dropzone dropzone-nk needsclick" id="demo1-upload">
+                                    <div class="dz-message needsclick download-custom">
+                                        <i class="notika-icon notika-cloud"></i>
+                                        <h2>Перетащите файл или просто кликните, чтоб загрузить</h2>
+                                        <p><span class="note needsclick">(Это пробный вариант. Загруженные файлы <strong>не</strong> будут отправлены.)</span>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="vw-ml-action-ls text-right mg-t-20">
+                            <div class="btn-group ib-btn-gp active-hook nk-email-inbox">
+                                <button class="btn btn-default btn-sm waves-effect" onclick="deleteComplaints(1)"><i class="notika-icon notika-trash"></i> Удалить</button>
+                                <!-- <button class="btn btn-default btn-sm waves-effect"><i class="fa fa-save"></i> Сохранить</button> -->
+                                <a href="requests.html" class="btn btn-default btn-sm waves-effect"><i class="fa fa-paper-plane"></i> Запросы</a>
+                                <span id="aplicationButtonsContainer">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="notika-chat-list notika-shadow mg-t-30 dk-res-ds">
+                    <div class="realtime-ctn">
+                        <div class="realtime-title">
+                            <h2>Сообщения</h2>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <div class="chat-conversation">
+                            <div class="widgets-chat-scrollbar">
+                                <ul class="conversation-list">
+                                    <li class="clearfix">
+                                        <div class="chat-avatar">
+                                            <img src="img/post/1.jpg" alt="male">
+                                            <i>27.10.18</i>
+                                        </div>
+                                        <div class="conversation-text">
+                                            <div class="ctext-wrap">
+                                                <i>Иван Иванов</i>
+                                                <p>
+                                                    Привет!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix odd">
+                                        <div class="chat-avatar">
+                                            <img src="img/post/2.jpg" alt="Female">
+                                            <i>27.10.18</i>
+                                        </div>
+                                        <div class="conversation-text">
+                                            <div class="ctext-wrap chat-widgets-cn">
+                                                <i>Дарья Иванова</i>
+                                                <p>
+                                                    Привет! Как дела?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="chat-avatar">
+                                            <img src="img/post/1.jpg" alt="male">
+                                            <i>27.10.18</i>
+                                        </div>
+                                        <div class="conversation-text">
+                                            <div class="ctext-wrap">
+                                                <i>Иван Иванов</i>
+                                                <p>
+                                                    Хорошо
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chat-widget-input">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-sm-12 col-xs-12 chat-inputbar">
+                                        <div class="form-group todo-flex">
+                                            <div class="nk-int-st">
+                                                <input type="text" class="form-control chat-input" placeholder="Введите текст">
+                                            </div>
+                                            <div class="chat-send">
+                                                <button type="submit" class="btn btn-md btn-primary btn-block notika-chat-btn">Отправить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alertModal" role="dialog">
+        <div class="modal-dialog modals-default nk-red">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Что-то пошло не так...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" role="dialog">
+        <div class="modal-dialog modals-default nk-indigo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Изменения успешно сохранены</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inbox area End-->
+    <!-- Start Footer area-->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer-copy-right">
+                        <p>ОНК по Санкт-Петербургу © 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer area-->
+    <!-- dropzone JS
+    ============================================ -->
+    <script src="js/dropzone/dropzone.js"></script>
+    <!-- jquery
+        ============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+        ============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+        ============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+        ============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- owl.carousel JS
+        ============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- scrollUp JS
+        ============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- meanmenu JS
+        ============================================ -->
+    <script src="js/meanmenu/jquery.meanmenu.js"></script>
+    <!-- counterup JS
+        ============================================ -->
+    <script src="js/counterup/jquery.counterup.min.js"></script>
+    <script src="js/counterup/waypoints.min.js"></script>
+    <script src="js/counterup/counterup-active.js"></script>
+    <!-- mCustomScrollbar JS
+        ============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- sparkline JS
+        ============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/sparkline-active.js"></script>
+    <!-- flot JS
+        ============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- knob JS
+        ============================================ -->
+    <script src="js/knob/jquery.knob.js"></script>
+    <script src="js/knob/jquery.appear.js"></script>
+    <script src="js/knob/knob-active.js"></script>
+    <!--  wave JS
+        ============================================ -->
+    <script src="js/wave/waves.min.js"></script>
+    <script src="js/wave/wave-active.js"></script>
+    <!-- icheck JS
+        ============================================ -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <script src="js/icheck/icheck-active.js"></script>
+    <!--  Chat JS
+        ============================================ -->
+    <script src="js/chat/jquery.chat.js"></script>
+    <!--  todo JS
+        ============================================ -->
+    <script src="js/todo/jquery.todo.js"></script>
+    <!-- bootstrap select JS
+            ============================================ -->
+    <script src="js/bootstrap-select/bootstrap-select.js"></script>
+    <!-- plugins JS
+        ============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="js/main.js"></script>
+    <!-- main JS
+        ============================================ -->
+    <script src="js/index.js"></script>
+    <script>
+    loadComplaint();
+    </script>
+</body>
+
+</html>
